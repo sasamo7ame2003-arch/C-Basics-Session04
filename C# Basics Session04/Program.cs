@@ -40,26 +40,36 @@ namespace C__Basics_Session04
 
 
             #region Question5
-            int Pages = 400;
-            Console.WriteLine(Pages);
-            AddBonusPages(Pages);
-            Console.WriteLine(Pages);
-
-
-            
-
-
-
-
-
-
-
+            //int Pages = 400;
+            //Console.WriteLine(Pages);
+            //AddBonusPages(Pages);
+            //Console.WriteLine(Pages);
 
 
 
 
 
             #endregion
+
+
+
+            #region Question6
+            //The output will be 20.5 because an Array is a Reference Type. The reference is copied, not the array itself. 
+
+            //Both references point to the same array in memory. Therefore, any changes made to the array elements inside the method will affect the original array.
+            
+            double[] prices = { 25.5, 40.0 };
+
+            ApplyDiscount(prices);
+
+            Console.WriteLine(prices[0]);
+            #endregion
+
+
+
+
+
+
         }
 
 
@@ -87,17 +97,23 @@ namespace C__Basics_Session04
 
 
         #region Question5
-        public static void AddBonusPages(int Pages)
-        {
-            Pages += 50;
+        //public static void AddBonusPages(int Pages)
+        //{
+        //    Pages += 50;
 
 
-        }
-        //The result will be 400 because this is Pass by Value It takes a copy of the variable's value not the original variable It changes the copy it receives not the original value This is different  ref
+        //}
+        //The result will be 400 because this is Pass by Value It takes a copy of the variable's value not the original
+        //variable It changes the copy it receives not the original value This is different  ref
 
         #endregion
 
-
+        #region Question6
+        public static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+        }
+        #endregion
 
 
 
