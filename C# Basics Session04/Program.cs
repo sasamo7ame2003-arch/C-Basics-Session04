@@ -30,19 +30,36 @@ namespace C__Basics_Session04
 
             #region Question3
 
-            {
-                Program.PrintWelcomeMessage();
-            }
+            //{
+            //    Program.PrintWelcomeMessage();
+            //}
             #endregion
-
+            #region Question4
+            Program.PrintBookTitle("Clean Code");
+            #endregion
         }
 
 
         #region Question3
-        public static void PrintWelcomeMessage()
+        //Write a method called PrintWelcomeMessage that takes no parameters and prints
+        //"Welcome to the Library!". Call it from Main.
+
+        //public static void PrintWelcomeMessage()
+        //{
+        //    Console.WriteLine("Welcome to the Library!");
+        //}
+        #endregion
+
+        #region Question4
+        //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
+        //"Clean Code"
+
+        public static void PrintBookTitle(string title)
         {
-            Console.WriteLine("Welcome to the Library!");
+            Console.WriteLine("Book title: "+title);
         }
+
+
         #endregion
 
 
