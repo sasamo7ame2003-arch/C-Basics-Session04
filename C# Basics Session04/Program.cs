@@ -35,7 +35,30 @@ namespace C__Basics_Session04
             //}
             #endregion
             #region Question4
-            Program.PrintBookTitle("Clean Code");
+            //Program.PrintBookTitle("Clean Code");
+            #endregion
+
+
+            #region Question5
+            int Pages = 400;
+            Console.WriteLine(Pages);
+            AddBonusPages(Pages);
+            Console.WriteLine(Pages);
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
             #endregion
         }
 
@@ -54,11 +77,23 @@ namespace C__Basics_Session04
         //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
         //"Clean Code"
 
-        public static void PrintBookTitle(string title)
-        {
-            Console.WriteLine("Book title: "+title);
-        }
+        //public static void PrintBookTitle(string title)
+        //{
+        //    Console.WriteLine("Book title: "+title);
+        //}
 
+
+        #endregion
+
+
+        #region Question5
+        public static void AddBonusPages(int Pages)
+        {
+            Pages += 50;
+
+
+        }
+        //The result will be 400 because this is Pass by Value It takes a copy of the variable's value not the original variable It changes the copy it receives not the original value This is different  ref
 
         #endregion
 
