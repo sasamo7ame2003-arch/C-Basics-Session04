@@ -57,15 +57,23 @@ namespace C__Basics_Session04
             //The output will be 20.5 because an Array is a Reference Type. The reference is copied, not the array itself. 
 
             //Both references point to the same array in memory. Therefore, any changes made to the array elements inside the method will affect the original array.
-            
-            double[] prices = { 25.5, 40.0 };
 
-            ApplyDiscount(prices);
+            //double[] prices = { 25.5, 40.0 };
 
-            Console.WriteLine(prices[0]);
+            //ApplyDiscount(prices);
+
+            //Console.WriteLine(prices[0]);
             #endregion
 
+            #region Question7
+            //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+           // Call it and print pages afterward. How is the result different from question 5 ?
 
+                        int Pages = 400;
+            Console.WriteLine(Pages);
+            AddBonusPages(ref Pages);
+            Console.WriteLine(Pages);
+            #endregion
 
 
 
@@ -100,7 +108,7 @@ namespace C__Basics_Session04
         //public static void AddBonusPages(int Pages)
         //{
         //    Pages += 50;
-
+        //}
 
         //}
         //The result will be 400 because this is Pass by Value It takes a copy of the variable's value not the original
@@ -109,11 +117,23 @@ namespace C__Basics_Session04
         #endregion
 
         #region Question6
-        public static void ApplyDiscount(double[] prices)
-        {
-            prices[0] -= 5;
-        }
+        //public static void ApplyDiscount(double[] prices)
+        //{
+        //    prices[0] -= 5;
+        //}
         #endregion
+        #region Question7
+        //450 Because ref allows the method to modify the original variable directly.
+        public static void AddBonusPages( ref int Pages)
+        {
+            Pages += 50;
+        }
+         
+
+
+
+        #endregion
+
 
 
 
