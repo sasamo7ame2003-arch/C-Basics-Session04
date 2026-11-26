@@ -76,19 +76,32 @@ namespace C__Basics_Session04
             #endregion
 
             #region Question8
-            double[] prices = { 16.5 ,17.5, 18.0 };
+            //double[] prices = { 16.5 ,17.5, 18.0 };
 
-            ReplaceArray (ref prices);
-           
-            for (int i = 0; i < prices.Length; i++)
-            {
-                Console.WriteLine(prices[i]);
-            }
-          
-                
+            //ReplaceArray (ref prices);
+
+            //for (int i = 0; i < prices.Length; i++)
+            //{
+            //    Console.WriteLine(prices[i]);
+            //}
+
+
             #endregion
 
+            #region  Question9
+            //Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+           // price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it
+            double price;
 
+            bool found = TryGetPrice("Clean Code", out price);
+
+            if (found)
+            {
+                Console.WriteLine(found);
+                Console.WriteLine(price);
+               
+            }
+            #endregion
 
 
         }
@@ -149,18 +162,32 @@ namespace C__Basics_Session04
         #endregion
 
         #region Question8
-        public static void ReplaceArray(ref double[] prices)
-        {
-            prices = new double[] { 10.0, 12.5, 15.0 };
-        }
+        //public static void ReplaceArray(ref double[] prices)
+        //{
+        //    prices = new double[] { 10.0, 12.5, 15.0 };
+        //}
         #endregion
 
+        #region Question9
+        public static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+            #endregion
 
 
 
 
 
 
-
+        }
     }
 }
