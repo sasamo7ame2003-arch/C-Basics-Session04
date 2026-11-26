@@ -67,12 +67,25 @@ namespace C__Basics_Session04
 
             #region Question7
             //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
-           // Call it and print pages afterward. How is the result different from question 5 ?
+            // Call it and print pages afterward. How is the result different from question 5 ?
 
-                        int Pages = 400;
-            Console.WriteLine(Pages);
-            AddBonusPages(ref Pages);
-            Console.WriteLine(Pages);
+            // int Pages = 400;
+            //Console.WriteLine(Pages);
+            //AddBonusPages(ref Pages);
+            //Console.WriteLine(Pages);
+            #endregion
+
+            #region Question8
+            double[] prices = { 16.5 ,17.5, 18.0 };
+
+            ReplaceArray (ref prices);
+           
+            for (int i = 0; i < prices.Length; i++)
+            {
+                Console.WriteLine(prices[i]);
+            }
+          
+                
             #endregion
 
 
@@ -122,16 +135,24 @@ namespace C__Basics_Session04
         //    prices[0] -= 5;
         //}
         #endregion
+
         #region Question7
         //450 Because ref allows the method to modify the original variable directly.
-        public static void AddBonusPages( ref int Pages)
+        //public static void AddBonusPages( ref int Pages)
+        //{
+        //    Pages += 50;
+        //}
+
+
+
+
+        #endregion
+
+        #region Question8
+        public static void ReplaceArray(ref double[] prices)
         {
-            Pages += 50;
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
-         
-
-
-
         #endregion
 
 
