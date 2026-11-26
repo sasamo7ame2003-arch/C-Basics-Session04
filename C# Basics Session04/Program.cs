@@ -120,7 +120,7 @@ namespace C__Basics_Session04
             // PrintBookInfo( pages:450, title:"Clean Code");
             #endregion
 
-            #region c
+            #region 
             //Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
             //Call it with three book titles.
             PrintAllTitles("Clean Code", "C# Basics", "Python");
