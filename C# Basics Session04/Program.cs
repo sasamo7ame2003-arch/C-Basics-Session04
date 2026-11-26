@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Reflection;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C__Basics_Session04
 {
@@ -90,17 +91,26 @@ namespace C__Basics_Session04
 
             #region  Question9
             //Write a method bool TryGetPrice(string title, out double price) that returns true and sets
-           // price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it
-            double price;
+            // price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it
+            //double price;
 
-            bool found = TryGetPrice("Clean Code", out price);
+            //bool found = TryGetPrice("Clean Code", out price);
 
-            if (found)
-            {
-                Console.WriteLine(found);
-                Console.WriteLine(price);
-               
-            }
+            //if (found)
+            //{
+            //    Console.WriteLine(found);
+            //    Console.WriteLine(price);
+
+            //}
+            #endregion
+
+            #region Question10
+            //Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call
+            //it once with only a title, and once passing both a title and pages.
+
+            PrintBookInfo("Clean Code");
+
+            PrintBookInfo("Clean Code", 450);
             #endregion
 
 
@@ -169,25 +179,35 @@ namespace C__Basics_Session04
         #endregion
 
         #region Question9
-        public static bool TryGetPrice(string title, out double price)
+        //public static bool TryGetPrice(string title, out double price)
+        //{
+        //    if (title == "Clean Code")
+        //    {
+        //        price = 25.5;
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        price = 0;
+        //        return false;
+
+        //    }
+
+        //}
+        #endregion
+
+        #region Question10
+        public static void PrintBookInfo(string title, int pages = 300)
         {
-            if (title == "Clean Code")
-            {
-                price = 25.5;
-                return true;
-            }
-            else
-            {
-                price = 0;
-                return false;
-            }
-            #endregion
-
-
-
-
-
-
+            Console.WriteLine($"Title: {title}, Pages: {pages}");
         }
+        #endregion
+
+
+
+
+
+
+
     }
 }
